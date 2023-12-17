@@ -1,0 +1,18 @@
+# RTL Simulation Variables
+sim.inputs:
+  input_files:
+    - "src/alu.v"
+    - "src/alu_tb.v"
+  timescale: "1ns/10ps"
+  options:
+    - "+incdir+../../src"
+    - "-notice"
+    - "-line"
+    - "+lint=all,noVCDE"
+    - "+v2k"
+    - "-sverilog"
+    - "-debug"
+  top_module: "alu"
+  tb_name: "alu_tb"
+  defines: 
+    - "CLOCK_PERIOD=5.00"
